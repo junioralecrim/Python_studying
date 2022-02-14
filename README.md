@@ -1,2 +1,2 @@
 # Python
- Algoritimos de exercícios Python
+ Tudo que eu faço em python
