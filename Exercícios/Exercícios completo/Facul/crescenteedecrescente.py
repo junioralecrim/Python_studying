@@ -6,7 +6,7 @@ for i in range(5):
     e = input("Digite o %d° valor: " % (i+1))
     valoresNormais.append(e) #quando usado o append a lista não imprime de forma separada os números com mais de um algarismo.
     
-valoresOrdenados = sorted(valoresNormais)
+valoresOrdenados = sorted(valoresNormais) #"sorted" ordena valores de forma ascendente 
 
 #verificação
 if (valoresNormais == valoresOrdenados):
