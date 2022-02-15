@@ -10,8 +10,5 @@ for i in range(3):
         if(contPosição == 3):
             matOrdenado = sorted(mat)
 
-            
-
-
 
 print(matOrdenado)
