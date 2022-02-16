@@ -1,22 +1,18 @@
-contPosição = 0
-mat = [[0 for _ in range(3)]for _ in range(3)]
-matOrdenado = [[0 for _ in range(3)]for _ in range(3)]
-aux = []
+lista1 = []
+lista2 = []
+lista3 = []
+
+matriz = [lista1] + [lista2] + [lista3]
+
 cont = 0
-n = 1
 
 for i in range(3):
-    for j in range(3):
-        mat[i][j] = input("Digite o valor %d°: " % (contPosição+1))
-        contPosição += +1
+    if(cont < 3):
+        lista1[i] = input("Digite o %d° valor: " % (cont + 1))
+        cont += +1
 
-        if(contPosição <= 3):
-            aux += mat[i][j]
-            matOrdenado = sorted(aux)
-            
-        if((contPosição > 3) and (contPosição <= 6)):
-            aux += mat[i][j]
-            matOrdenado = sorted(aux)
+#        if (cont > 3) and (cont < 6):
 
+print(matriz)
 
-print(matOrdenado)
+# https://pt.stackoverflow.com/questions/91908/como-obter-a-linha-de-um-determinado-indice-de-matriz-python
