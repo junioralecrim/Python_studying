@@ -2,19 +2,26 @@ lista1 = []
 lista2 = []
 lista3 = []
 listaAux = []
+listaÍmpares = []
 cont = 0
+acumulador = 0
 
 for i in range(9): #receber os valores
-        e = int(input("Digite o %d° valor: " % (cont + 1)))
-        listaAux.append(e)        
-        cont += +1
+    e = int(input("Digite o %d° valor: " % (cont + 1)))
+    listaAux.append(e)
+    cont += +1
+    
+    if (e%2 != 0):
+        acumulador += e
+        listaÍmpares.append(e)
 
-listaAux.sort() #ordenar os valores em ordem crescente
+
 cont = 0
 
 
-while (cont < 9): #separar os valores em cada linha/coluna da matriz 3x3
-  
+
+
+while (cont < 9): #separar os valores em cada linha/coluna da matriz 3x3  
     if(cont < 3):
         lista1.append(listaAux[cont])
     
@@ -28,6 +35,4 @@ while (cont < 9): #separar os valores em cada linha/coluna da matriz 3x3
 
 
 matriz = [lista1] + [lista2] + [lista3]
-
-
 print(matriz)
