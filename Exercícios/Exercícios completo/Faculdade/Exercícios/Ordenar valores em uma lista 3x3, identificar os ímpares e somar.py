@@ -36,3 +36,8 @@ while (cont < 9): #separar os valores em cada linha/coluna da matriz 3x3
 
 matriz = [lista1] + [lista2] + [lista3]
 print(matriz)
+
+print("\nOs números ímpares digitados pelo usuário foram: ")
+print(listaÍmpares)
+
+print("\nA soma de todos os números ímpares é: %d" % (acumulador))
