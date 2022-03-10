@@ -5,6 +5,7 @@ i = 1
 contadorDias_1 = 0
 contadorDias_2 = 0
 contadorDiasInicial = 0
+contadorBissexto = 0
  
 data1_Dia = int(input("Digite o dia em que você nasceu: "))
 data1_Mes = int(input("Digite o mes em que você nasceu: "))
@@ -67,13 +68,23 @@ if(i == 2):
 
 #Contador de dias a partir da data em que o usuário digitou inicialmente.
 
-# VERIFICAÇÃO 
-
-
+# VERIFICAÇÃO SE O ANO É BISSEXTO OU NÃO
+i = data1_Ano
+while (i < data2_Ano):
+    if(i%4 == 0):
+        if(i%100 == 0):
+            if(i%400 == 0):
+                contadorBissexto += +1
+                i += 1
+        else:  #caso contrario va para a etapa 4
+            contadorBissexto += +1
+            i += 1    
+    else: #etapa 5. O ano não é bissexto e o código segue
+        i += 1
 
 contadorDias_2 = contadorDias_2 + contadorDiasInicial
 
-totalDias = (contadorDias_1 + contadorDias_2) + (anos*365)
+totalDias = (contadorDias_1 + contadorDias_2) + (anos*365) + contadorBissexto
 
 print(f"Anos de vida {anos}")
 print(f"A quantidade de dias entre a data digitada e a data atual é: {totalDias}")
