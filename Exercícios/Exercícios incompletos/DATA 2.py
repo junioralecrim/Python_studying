@@ -93,3 +93,8 @@ totalDias = (contadorDias_1 + contadorDias_2) + (anos*365) + contadorBissexto
 print(f"\nVocê tem {anos} de vida")
 
 print(f"\nA quantidade de dias entre {data1_Dia}/{data1_Mes}/{data1_Ano} e {data2_Dia}/{data2_Mes}/{data2_Ano} é: {totalDias} dias.\nQuantidade de anos bissextos: {contadorBissexto}")
+
+#falta ajustar a parte de contar o ano bissexto somente se passar da data de fevereiro
+
+
+
