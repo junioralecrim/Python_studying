@@ -6,7 +6,9 @@ contadorDias_1 = 0
 contadorDias_2 = 0
 contadorDiasInicial = 0
 contadorBissexto = 0
- 
+
+print("--- VAMOS DESCOBRIR A QUANTIDADE DE DIAS ENTRE DUAS DATAS ---\n\n")
+
 data1_Dia = int(input("Digite o dia em que você nasceu: "))
 data1_Mes = int(input("Digite o mes em que você nasceu: "))
 data1_Ano = int(input("Digite o ano em que você nasceu: "))
@@ -86,5 +88,8 @@ contadorDias_2 = contadorDias_2 + contadorDiasInicial
 
 totalDias = (contadorDias_1 + contadorDias_2) + (anos*365) + contadorBissexto
 
-print(f"Anos de vida {anos}")
-print(f"A quantidade de dias entre a data digitada e a data atual é: {totalDias}")
+
+
+print(f"\nVocê tem {anos} de vida")
+
+print(f"\nA quantidade de dias entre {data1_Dia}/{data1_Mes}/{data1_Ano} e {data2_Dia}/{data2_Mes}/{data2_Ano} é: {totalDias} dias.\nQuantidade de anos bissextos: {contadorBissexto}")
