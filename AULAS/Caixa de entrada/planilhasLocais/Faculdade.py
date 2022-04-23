@@ -5,6 +5,7 @@ from openpyxl import load_workbook
 
 #caminho = 'AULAS-EAD-REGISTRO-DE-ATIVIDADE.xlsx'
 
+#carregando o arquivo e selecionando uma página
 caminho = 'Aprendendoalerplanilhas.xlsx'
 arquivo_excel = load_workbook(caminho, data_only=True)
 
@@ -23,7 +24,7 @@ print(conteudo.value)
 presença = 1
 
 
-
+#aqui eu estou acessando os dados da planilha e imprimindo na tela.
 for i in range(7, 17):
     aluno = planilha.cell(row=i, column=2) #row = linha; column = coluna; value = valor que está sendo acessado
     arquivo_excel.save("Aprendendoalerplanilhas.xlsx") #ainda não entendi pra que serve isso??
