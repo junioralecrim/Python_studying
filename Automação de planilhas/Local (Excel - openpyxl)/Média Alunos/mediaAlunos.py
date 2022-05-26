@@ -36,7 +36,6 @@ for i in range(7, 12):
     mediaAlunos.append(e)
 
 
-
 for i in range(0, 5):
     print(f"Aluno: {alunos[i]}\nMédia: {mediaAlunos[i]}\n")
 
