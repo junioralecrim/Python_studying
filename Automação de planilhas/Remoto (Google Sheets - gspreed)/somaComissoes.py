@@ -9,7 +9,7 @@ acharComissao = 'valor comissão'
 #essa parte é a minha chave de acesso do google drive à API do google sheets
 gc = gspread.service_account(filename='api.json')
 sheets = \
-    {'VENDAS':'https://docs.google.com/spreadsheets/d/1U1XDkHXGwVWOR78kJbSO82je6w4ooM94VSMuJiGymVc/edit?usp=sharing'}
+    {'VENDAS':'https://docs.google.com/spreadsheets/d/1dNsphjNxu9Wv3QEwcHbH2e5nu2O2VaIzj66BgXombUA/edit?usp=sharing'}
 
 for planilha in sheets.values():
    sh = gc.open_by_url(planilha)

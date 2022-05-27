@@ -3,7 +3,7 @@ import gspread
 #https://buildmedia.readthedocs.org/media/pdf/gspread/latest/gspread.pdf
 gc = gspread.service_account(filename='projeto-teste-345723-aff6b27a9374.json')
 sheets = \
-    {'VENDAS':'https://docs.google.com/spreadsheets/d/1U1XDkHXGwVWOR78kJbSO82je6w4ooM94VSMuJiGymVc/edit?usp=sharing'}
+    {'VENDAS':'https://docs.google.com/spreadsheets/d/1dNsphjNxu9Wv3QEwcHbH2e5nu2O2VaIzj66BgXombUA/edit?usp=sharing'}
 
 def carregarTabelasBase():
     for planilha in sheets.values():
