@@ -8,7 +8,9 @@ para acesso e manipulação dos dados.
 O número de requisições por segundo também é limitado pela Google, podendo gerar alguns erros
 de execução no código, então é utilizado em alguns casos o "time.sleep()" para dar um tempo (em segundos)
 no loop.
+
 ---
+
 **AVISO:** Deixar o arquivo .json de acesso (chave api) público na internet configura em risco
 extremo para o proprietário da conta, já que esta chave permite o acesso a todos os arquivos presentes
 no google drive do usuário.
