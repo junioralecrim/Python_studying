@@ -6,4 +6,5 @@ Algorithms created in Python in the faculty of **Algorithms II**.
 ---
 ##Tkinter
 
+
 █████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
