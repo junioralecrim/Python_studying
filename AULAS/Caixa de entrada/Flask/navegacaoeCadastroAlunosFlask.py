@@ -159,3 +159,5 @@ def name2(usr):
 
 if __name__ == "__main__":
     app.run()
+    
+#unir agora com o banco de dados do pgadmin, passando os parâmetros na função def name2 acima
