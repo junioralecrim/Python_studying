@@ -1,5 +1,7 @@
 from flask import Flask, url_for, render_template, redirect, request
 from werkzeug.utils import redirect
+import psycopg2
+
 #por algum motivo, quando tento importar tudo aqui não vai. Preciso importar o url_for e o render_template separadamente
 
 
@@ -128,17 +130,18 @@ if __name__ == "__main__":
 
 '''----------------------------------EX7---------------------------------'''
 
-
+'''
 app = Flask(__name__)
 
 @app.route("/")
 def home():
     return render_template('index.html')
 
-'''
-@app.route("/<usr>")
-def name(usr):
-    return f"<h1>{usr}</h1>"'''
+
+
+#@app.route("/<usr>")
+#def name(usr):
+#    return f"<h1>{usr}</h1>
 
 
 @app.route("/login", methods=["POST", "GET"])
@@ -158,6 +161,24 @@ def name2(usr):
 
 
 if __name__ == "__main__":
-    app.run()
-    
-#unir agora com o banco de dados do pgadmin, passando os parâmetros na função def name2 acima
+    app.run()'''
+
+
+
+
+
+
+
+'''-------------------- Coding --------------------'''
+
+
+
+
+
+
+
+
+
+
+
+
