@@ -130,8 +130,8 @@ if __name__ == "__main__":
 
 '''----------------------------------EX7---------------------------------'''
 
-'''
-app = Flask(__name__)
+
+'''app = Flask(__name__)
 
 @app.route("/")
 def home():
@@ -161,24 +161,54 @@ def name2(usr):
 
 
 if __name__ == "__main__":
-    app.run()'''
-
-
-
-
-
-
+    app.run()
+'''
 
 '''-------------------- Coding --------------------'''
 
 
 
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return render_template('index.html')
 
 
 
+#@app.route("/<usr>")
+#def name(usr):
+#    return f"<h1>{usr}</h1>
 
 
+@app.route("/cadastrodealunos",methods=["POST","GET"])
+def cadastrodealunos():
+    if request.method == "POST":
+        conectar = psycopg2.connect(host="localhost", port="5432", database="postgres", user="postgres", password="123")
+        cur = conectar.cursor()
 
+        user = request.form["name"]
+        age = request.form["age"]
+        matricula = request.form["matricula"]
+
+        #Conexao(user, idade, matricula)
+        cur.execute(f"INSERT INTO cadastroalunos(nome, idade, matricula) VALUES('{user}','{age}','{matricula}')")
+
+        conectar.commit()
+        cur.close()
+        conectar.close()
+        return redirect(url_for('cadasef', usr=user))
+    else:
+        return render_template("cadastrodealunos.html")
+
+
+@app.route("/<usr>")
+def name2(usr):
+    return render_template("index3.html", content=usr, parametro=["ai", "ei", "ou"])
+
+
+if __name__ == "__main__":
+    app.run()
 
 
 
