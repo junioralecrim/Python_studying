@@ -1,11 +1,12 @@
 import mysql.connector
+from flask import Flask
 
-db = mysql.connector.connect(
+'''db = mysql.connector.connect(
     host="localhost",
     user="root",
     password="alunoaluno",
     database="turfe"
-)
+)'''
 
 
 
@@ -114,9 +115,10 @@ db.close()
 
 ## 5 - Quem tem gato e não tem cachorro
 
+'''
 c = db.cursor()
 
-c.execute('''
+c.execute(
             SELECT nome FROM responsavel
             WHERE id in (
                 SELECT id_resp FROM pet
@@ -124,10 +126,55 @@ c.execute('''
                     (SELECT tipo FROM pet
                     where tipo not in (SELECT tipo FROM pet
                                         where tipo = 'Cachorro')))
-''')
+)
 
 for i in c.fetchall():
     print(i)
 
 c.close()
 db.close()
+'''
+
+
+
+
+
+
+
+
+
+
+
+#USANDO FLASK   
+
+app = Flask(__name__)
+
+@app.route("/pet")
+def pets():
+
+    db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="alunoaluno",
+    database="turfe"
+    )
+
+
+    c = db.cursor()
+
+
+    c.execute('''SELECT resp.nome, p.nome FROM responsavel as resp
+                join pet as p 
+                on resp.id = p.id_resp
+                where resp.nome = 'Maria'
+                ''') # pra usar linha quebrada tem q usar os três
+    
+    return list(c.fetchmany())
+
+
+
+
+
+
+
+
