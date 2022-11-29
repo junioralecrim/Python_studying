@@ -264,10 +264,21 @@ def list_pet_by_id(pet_id):
 def insert_pet():
     # dados recebidos através do método post
     pet_data = request.form # dicionário contendo todos os dados recebidos de um pet
-    print(pet_data)
+    id_resp = pet_data["id_resp"]
+    nome = pet_data["nome"]
+    tipo = pet_data["tipo"]
+    raca = pet_data["raca"]
+    
+    db = get_db()
+    c = db.cursor()
+    c.execute(f"""INSERT INTO pet (id_resp, nome, tipo, raca) VALUES ({id_resp}, '{nome}', '{tipo}', '{raca}')
+                   """)
+    db.commit()
+
+    return "Deu bom"
 
     # Inserir utilizando os dados recebidos e utilizando o SQL
-    pass
+    
 
 # Gerar rotas para os donos/responsáveis
 # 1. Listar todos os donos
